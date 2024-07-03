@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="ru.itis.summerpractice24.hw_2.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_categoriesFragment"
+            app:destination="@id/categoriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="ru.itis.summerpractice24.hw_2.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_profileResultFragment"
+            app:destination="@id/profileResultFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/action_profileFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="ru.itis.summerpractice24.hw_2.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="ru.itis.summerpractice24.hw_2.CategoriesFragment"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories" >
+        <action
+            android:id="@+id/action_categoriesFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="ru.itis.summerpractice24.hw_2.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/profileResultFragment"
+        android:name="ru.itis.summerpractice24.hw_2.ProfileResultFragment"
+        android:label="fragment_profile_result"
+        tools:layout="@layout/fragment_profile_result" />
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="ru.itis.summerpractice24.hw_2.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <action
+            android:id="@+id/action_detailsFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+</navigation>
